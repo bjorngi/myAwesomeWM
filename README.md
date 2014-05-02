@@ -12,6 +12,15 @@ This is a theme for the [Awesome Window Manager](http://awesome.naquadah.org/).
 - htop
 - urxvt
 
+## Shortcuts
+* `ModKey + Q` Launch google-chrome-stable.
+* `ModKey + i` Launch ranger.
+
+* `Modkey + [1-8]` Switch desktop.
+* `Modkey + Shift + [1-8]` Move application to desktop.
+
+* `Modkey + F12` Start/pause awmodoro.
+* `Modkey + Shift + F12` Stop awmodoro.
 ## Screenshots
 
 ![busy](screenshots/busy.png)
