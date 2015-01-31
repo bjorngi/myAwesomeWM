@@ -94,9 +94,11 @@ htop           = "urxvt -T 'processes' -hold -geometry 90x30-10+20 -e htop"
 calendar       = "urxvt -T 'calendar' -hold -geometry 21x9-5+20 -e cal"
 editor         = os.getenv("EDITOR") or "vim"
 editor_cmd     = terminal .. " -e " .. editor
-browser        = "google-chrome-stable"
+browser        = "firefox"
+mail           = "urxvt -e 'mutt'"
 altkey         = "Mod1"
 filesystem     = "urxvt -e 'ranger'"
+goprogram      = "urxvt -e 'vimg'"
 graphics       = "inkscape"
 
 
@@ -329,7 +331,6 @@ globalkeys = awful.util.table.join(
             if client.focus then client.focus:raise() end end),
     awful.key({ modkey,           }, "k", function () awful.client.focus.byidx(-1)
             if client.focus then client.focus:raise() end end),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show({keygrabber=true}) end),
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end),
     awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end),
@@ -364,9 +365,10 @@ globalkeys = awful.util.table.join(
 
     -- User programs
     awful.key({ modkey }, "q", function () awful.util.spawn(browser) end),
+    awful.key({ modkey }, "w", function () awful.util.spawn(mail) end),
     awful.key({ modkey }, "i", function () awful.util.spawn(filesystem) end),
+    awful.key({ modkey }, "g", function () awful.util.spawn(goprogram) end),
     awful.key({ modkey }, "s", function () awful.util.spawn(gui_editor) end),
-    awful.key({ modkey }, "g", function () awful.util.spawn(graphics) end),
 
     awful.key({ }, "XF86Launch1", function () awful.util.spawn("slimlock") end),
 
