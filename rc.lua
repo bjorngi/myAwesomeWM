@@ -98,6 +98,7 @@ browser        = "firefox"
 mail           = "urxvt -e 'mutt'"
 altkey         = "Mod1"
 filesystem     = "urxvt -e 'ranger'"
+skylabs        = "urxvt -e 'skylabs'"
 goprogram      = "urxvt -e 'vimg'"
 graphics       = "inkscape"
 
@@ -365,12 +366,12 @@ globalkeys = awful.util.table.join(
 
     -- User programs
     awful.key({ modkey }, "q", function () awful.util.spawn(browser) end),
+    awful.key({ modkey }, "t", function () awful.util.spawn(skylabs) end),
     awful.key({ modkey }, "w", function () awful.util.spawn(mail) end),
     awful.key({ modkey }, "i", function () awful.util.spawn(filesystem) end),
     awful.key({ modkey }, "g", function () awful.util.spawn(goprogram) end),
     awful.key({ modkey }, "s", function () awful.util.spawn(gui_editor) end),
-
-    awful.key({ }, "XF86Launch1", function () awful.util.spawn("slimlock") end),
+    awful.key({ modkey }, "l", function () awful.util.spawn('slimlock') end),
 
 
 
